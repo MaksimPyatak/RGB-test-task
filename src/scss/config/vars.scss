@@ -1,0 +1,25 @@
+$maxWidth: 1920; // максимальная ширина страницы
+$minWidth: 360; // минимальная ширина телефона
+$maxWidthContainer: 1040;
+$containerWidth: 928; //!??????
+$mainOffset: 16; // отступы безопасности для контейнера
+
+$mainFont: 'Gilroy';
+$mainWeight: 400;
+
+$whiteColor: rgba(255, 255, 255, 1);
+$whiteColor05: rgba(255, 255, 255, 0.5);
+$whiteColor005: rgba(255, 255, 255, 0.05);
+$blackInputColor: rgba(39, 45, 61, 1);
+$blackColor: rgba(36, 39, 49, 1);
+$violetColor: rgba(48, 46, 90, 1);
+$blurVioletColor: rgba(51, 47, 101, 1);
+$darkVioletColor: rgba(48, 58, 83, 1);
+$blueColor: rgba(66, 82, 209, 1);
+$brightBlueColor: rgba(66, 82, 209, 1);
+$redColor: rgba(255, 52, 89, 1);
+
+$fontFamily: $mainFont, sans-serif;
+$fontColor: $whiteColor;
+$fontSize: 12;
+$fontWeight: $mainWeight;

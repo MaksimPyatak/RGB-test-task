@@ -1,0 +1,15 @@
+{
+  "name": "RGB_test_task",
+  "version": "1.0.0",
+  "description": "My test task for RGB",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/scss/styles.scss css/styles.css",
+    "sass:watch": "sass --watch src/scss/styles.scss:css/styles.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.32.8"
+  }
+}

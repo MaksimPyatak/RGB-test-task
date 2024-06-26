@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POWERCODE ACADEMY</title>
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="background">
+        <div class="background__big-blur"></div>
+        <div class="background__small-blur"></div>
+      </div>
+
+      <header class="header">
+        <div class="header__container">
+          <a href="#" class="header__logo">
+            <picture>
+              <source
+                media="(min-width: 576px)"
+                srcset="./img/logotype.webp"
+                type="image/webp"
+              />
+              <source
+                media="(max-width: 575px)"
+                srcset="./img/small-logo.webp"
+                type="image/webp"
+              />
+              <source
+                media="(max-width: 575px)"
+                srcset="./img/small-logo.png"
+                type="image/png"
+              />
+              <img
+                class="header__logo-img"
+                src="./img/logotype.png"
+                alt="Background image"
+                width="182"
+                height="56"
+                loading="lazy"
+              />
+            </picture>
+          </a>
+          <ul class="header__info-list">
+            <li class="header__info-list-item">
+              <div class="header__calendar-icon">
+                <img src="img/calendar.png" alt="calendar icon" />
+              </div>
+              <div class="header__calendar-text">28 декабря</div>
+            </li>
+            <li class="header__info-list-item">
+              <div class="header__duration-icon">
+                <img src="img/gg_time.png" alt="clock icon" />
+              </div>
+              <div class="header__duration-text">3,5 часа</div>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="main__icons icons">
+          <div class="icons__html">
+            <picture>
+              <source srcset="./img/HTML5.avif" type="image/avif" />
+              <source srcset="./img/HTML5.webp" type="image/webp" />
+              <source srcset="./img/HTML5.png" type="image/png" />
+              <img
+                class="icons__html-img"
+                src="./img/HTML5.png"
+                alt="Background image"
+                width="106"
+                height="106"
+                loading="lazy"
+              />
+            </picture>
+            <div class="icons__html-point"></div>
+          </div>
+          <div class="icons__css">
+            <picture>
+              <source srcset="./img/CSS3.avif" type="image/avif" />
+              <source srcset="./img/CSS3.webp" type="image/webp" />
+              <img
+                class="icons__css-img"
+                src="./img/CSS3.png"
+                alt="Background image"
+                width="87"
+                height="102"
+                loading="lazy"
+              />
+            </picture>
+            <div class="icons__css-point"></div>
+          </div>
+          <div class="icons__js">
+            <picture>
+              <source srcset="./img/javascript.avif" type="image/avif" />
+              <source srcset="./img/javascript.webp" type="image/webp" />
+              <img
+                class="icons__js-img"
+                src="./img/javascript.png"
+                alt="Background image"
+                width="80"
+                height="87"
+                loading="lazy"
+              />
+            </picture>
+            <div class="icons__js-point"></div>
+          </div>
+          <div class="icons__sublime">
+            <picture>
+              <source srcset="./img/sublime-text.webp" type="image/webp" />
+              <img
+                class="icons__sublime-img"
+                src="./img/sublime-text.png"
+                alt="Background image"
+                width="66"
+                height="65"
+                loading="lazy"
+              />
+            </picture>
+            <div class="icons__sublime-point"></div>
+          </div>
+          <div class="icons__vscode">
+            <picture>
+              <source
+                srcset="./img/Visual_Studio_Code.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="./img/Visual_Studio_Code.webp"
+                type="image/webp"
+              />
+              <img
+                class="icons__vscode-img"
+                src="./img/Visual_Studio_Code.png"
+                alt="Background image"
+                width="78"
+                height="78"
+                loading="lazy"
+              />
+            </picture>
+            <div class="icons__vscode-point"></div>
+          </div>
+        </div>
+        <div class="main__container">
+          <div class="main__title-block title-block">
+            <div class="title-block__label">
+              <img
+                class="title-block__label-icon"
+                src="img/globe.png"
+                alt="Globe"
+              />
+              <div class="title-block__label-text">Вебинар</div>
+            </div>
+
+            <h1 class="title-block__title">
+              <span class="title-block__first-title-part"> front-end </span>
+              <span class="title-block__second-title-part">
+                <span></span>
+                с нуля
+              </span>
+              легкий старт в IT профессии
+            </h1>
+
+            <div class="title-block__text">
+              Узнайте какими
+              <span>
+                навыками должен обладать фронтенд разработчик в 2022 году
+              </span>
+              и как начать карьеру в востребованной профессии
+            </div>
+          </div>
+
+          <form class="main__form-block form-block">
+            <h2 class="form-block__title"
+              >Запишитесь <span>бесплатно</span> и получите подарок</h2
+            >
+
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Ваше имя и фамилия"
+            />
+
+            <input
+              type="tel"
+              name="tel"
+              id="tel"
+              placeholder="Ваш номер телефона"
+            />
+
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Ваш email"
+            />
+
+            <button type="submit">Записаться бесплатно</button>
+
+            <div class="form-block__text">
+              Нажимая на кнопку я согашаюсь
+              <a href="#">с политикой конфидециальности</a></div
+            >
+          </form>
+
+          <ul class="main__info-list info-list">
+            <li class="info-list__item">
+              <div class="info-list__item-img-box">
+                <picture>
+                  <source srcset="img/lecturer.webp" type="image/webp" />
+                  <img
+                    class="info-list__item-img"
+                    src="img/lecturer.png"
+                    alt="Background image"
+                    width="51"
+                    height="49"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+              <div class="info-list__item-text-box">
+                <div class="info-list__item-title">
+                  Кирилл <span>КАСАТОНОВ</span>
+                </div>
+
+                <div class="info-list__item-text"
+                  >6 лет коммерческого опыта с такими компаниями как
+                  Mercedes-Benz и другими крупными корпорациями</div
+                >
+              </div>
+            </li>
+
+            <li class="info-list__item">
+              <div class="info-list__item-img-box">
+                <picture>
+                  <source srcset="img/present.webp" type="image/webp" />
+                  <img
+                    class="info-list__item-img"
+                    src="img/present.png"
+                    alt="Background image"
+                    width="38"
+                    height="38"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+
+              <div class="info-list__item-text-box">
+                <div class="info-list__item-title"> Бонус за регистрацию </div>
+
+                <div class="info-list__item-text">
+                  PDF-файл "5 преимуществ профессии фронтенд разработчика"
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
