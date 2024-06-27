@@ -182,6 +182,7 @@
     }
 
     @include respond-below(sm) {
+      margin-bottom: 59px;
       grid-template:
         'title' auto
         'form' auto
@@ -191,6 +192,7 @@
 
     @include respond-below(xs) {
       margin-top: 4px;
+      gap: 22px 10%;
     }
   }
 
@@ -418,6 +420,7 @@
     }
 
     @include respond-below(sm) {
+      margin: 0px 0px 19px 0px;
       font-size: 18px;
     }
 
@@ -487,6 +490,10 @@
       font-size: 16px;
     }
 
+    @include respond-below(xs) {
+      font-size: 14px;
+    }
+
     span {
       font-weight: 500;
     }
@@ -503,7 +510,7 @@
   }
 
   @include respond-below(xs) {
-    padding: 41px 21px 40px 21px;
+    padding: 40px 21px 40px 21px;
   }
 
   &__title {
@@ -516,7 +523,12 @@
 
     @include respond-below(sm) {
       max-width: 248px;
-      margin: 0px auto 20px auto;
+      margin: 0px auto 19px auto;
+      font-size: 20px;
+    }
+
+    @include respond-below(xs) {
+      max-width: 236px;
     }
 
     span {
@@ -532,6 +544,12 @@
     border-radius: 4.48px;
     background: $blackInputColor;
     @include hidePlaceholder;
+
+    @include respond-below(sm) {
+      height: 46px;
+      padding: 0px 26px 0px 26px;
+      font-size: 12px;
+    }
   }
 
   button {
@@ -546,6 +564,14 @@
     font-weight: 700;
     line-height: 160%;
     z-index: 1;
+
+    @include respond-below(xs) {
+      max-width: 222px;
+      height: 46px;
+      margin: 0px auto 18px auto;
+      display: block;
+      font-size: 14px;
+    }
 
     &:hover {
       &::before {
@@ -579,6 +605,11 @@
     line-height: 150%;
     text-align: center;
     color: $whiteColor05;
+
+    @include respond-below(xs) {
+      max-width: 180px;
+      font-size: 11px;
+    }
 
     a {
       text-decoration: underline;
@@ -619,6 +650,12 @@
           font-size: 13px;
           text-transform: uppercase;
 
+          @include respond-below(xs) {
+            margin: 2.56px 0px 6px 0px;
+            font-size: 14px;
+            line-height: 100%;
+          }
+
           span {
             color: $brightBlueColor;
           }
@@ -633,7 +670,7 @@
     &:nth-child(2) {
       .info-list {
         &__item-img {
-          width: 38px;
+          width: 51px;
           object-fit: contain;
         }
 
@@ -651,6 +688,10 @@
   &__item-img-box {
     width: 51px;
     margin: 0px 17px 0px 0px;
+
+    @include respond-below(xs) {
+      margin: 0px 12px 0px 0px;
+    }
   }
 
   &__item-img {
@@ -663,6 +704,11 @@
   &__item-title {
     font-weight: 700;
     line-height: 140%;
+
+    @include respond-below(xs) {
+      font-size: 14px;
+    }
+
     span {
       color: $brightBlueColor;
     }

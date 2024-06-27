@@ -1,34 +1,44 @@
 @font-face {
-  font-family: "Gilroy";
-  src: local("Gilroy Regular"), local("Gilroy-Regular"), url("../../fonts/Gilroy-Regular.woff2") format("woff2"), url("../../fonts/Gilroy-Regular.woff") format("woff");
+  font-family: 'Gilroy';
+  src: local('Gilroy Regular'), local('Gilroy-Regular'),
+    url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+    url('../../fonts/Gilroy-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Gilroy";
-  src: local("Gilroy Medium"), local("Gilroy-Medium"), url("../../fonts/Gilroy-Medium.woff2") format("woff2"), url("../../fonts/Gilroy-MediumBold") format("woff");
+  font-family: 'Gilroy';
+  src: local('Gilroy Medium'), local('Gilroy-Medium'),
+    url('../fonts/Gilroy-Medium.woff2') format('woff2'),
+    url('../../fonts/Gilroy-MediumBold') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Gilroy";
-  src: local("Gilroy Semibold"), local("Gilroy-Semibold"), url("../../fonts/Gilroy-Semibold.woff2") format("woff2"), url("../../fonts/Gilroy-Semibold.woff") format("woff");
+  font-family: 'Gilroy';
+  src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+    url('../fonts/Gilroy-Semibold.woff2') format('woff2'),
+    url('../../fonts/Gilroy-Semibold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Gilroy";
-  src: local("Gilroy Bold"), local("Gilroy-Bold"), url("../../fonts/Gilroy-Bold.woff2") format("woff2"), url("../../fonts/Gilroy-Bold.woff") format("woff");
+  font-family: 'Gilroy';
+  src: local('Gilroy Bold'), local('Gilroy-Bold'),
+    url('../fonts/Gilroy-Bold.woff2') format('woff2'),
+    url('../../fonts/Gilroy-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Gilroy";
-  src: local("Gilroy Extrabold"), local("Gilroy-Extrabold"), url("../../fonts/Gilroy-Extrabold.woff2") format("woff2"), url("../../fonts/Gilroy-Extrabold.woff") format("woff");
+  font-family: 'Gilroy';
+  src: local('Gilroy Extrabold'), local('Gilroy-Extrabold'),
+    url('../fonts/Gilroy-Extrabold.woff2') format('woff2'),
+    url('../../fonts/Gilroy-Extrabold.woff') format('woff');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -87,7 +97,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  font-family: "Gilroy", sans-serif;
+  font-family: 'Gilroy', sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 1;
@@ -155,21 +165,21 @@ main {
   flex: 1 1 auto;
 }
 
-[class*=__container] {
+[class*='__container'] {
   max-width: 1040px;
   padding: 0 56px;
   margin: 0 auto;
 }
 @media (max-width: 575px) {
-  [class*=__container] {
+  [class*='__container'] {
     padding: 0 16px;
   }
 }
 
-[class*=-ibg] {
+[class*='-ibg'] {
   position: relative;
 }
-[class*=-ibg] img {
+[class*='-ibg'] img {
   position: absolute;
   top: 0;
   left: 0;
@@ -178,7 +188,7 @@ main {
   object-fit: cover;
 }
 
-[class*=-ibg_contain] img {
+[class*='-ibg_contain'] img {
   object-fit: contain;
 }
 
@@ -310,13 +320,15 @@ main {
     margin: 0px 3.56px 0px 0px;
   }
 }
-.header__calendar-text, .header__duration-text {
+.header__calendar-text,
+.header__duration-text {
   font-size: 14px;
   font-weight: 600;
   line-height: 100%;
 }
 @media (max-width: 575px) {
-  .header__calendar-text, .header__duration-text {
+  .header__calendar-text,
+  .header__duration-text {
     font-size: 11px;
   }
 }
@@ -349,24 +361,26 @@ main {
   margin-top: 82px;
   margin-bottom: 140px;
   display: grid;
-  grid-template: "title form" auto "info-list form" auto/46.01% 39.44%;
+  grid-template: 'title form' auto 'info-list form' auto/46.01% 39.44%;
   gap: 35px 14.55%;
 }
 @media (max-width: 1023px) {
   .main__container {
-    grid-template: "title form" auto "info-list form" auto/1fr 1fr;
+    grid-template: 'title form' auto 'info-list form' auto/1fr 1fr;
     gap: 42px 10%;
   }
 }
 @media (max-width: 767px) {
   .main__container {
-    grid-template: "title" auto "form" auto "info-list" auto/1fr;
+    margin-bottom: 59px;
+    grid-template: 'title' auto 'form' auto 'info-list' auto/1fr;
     gap: 42px 10%;
   }
 }
 @media (max-width: 575px) {
   .main__container {
     margin-top: 4px;
+    gap: 22px 10%;
   }
 }
 .main__title-block {
@@ -573,6 +587,7 @@ main {
 }
 @media (max-width: 767px) {
   .title-block__title {
+    margin: 0px 0px 19px 0px;
     font-size: 18px;
   }
 }
@@ -643,6 +658,11 @@ main {
     font-size: 16px;
   }
 }
+@media (max-width: 575px) {
+  .title-block__text {
+    font-size: 14px;
+  }
+}
 .title-block__text span {
   font-weight: 500;
 }
@@ -660,7 +680,7 @@ main {
 }
 @media (max-width: 575px) {
   .form-block {
-    padding: 41px 21px 40px 21px;
+    padding: 40px 21px 40px 21px;
   }
 }
 .form-block__title {
@@ -674,7 +694,13 @@ main {
 @media (max-width: 767px) {
   .form-block__title {
     max-width: 248px;
-    margin: 0px auto 20px auto;
+    margin: 0px auto 19px auto;
+    font-size: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .form-block__title {
+    max-width: 236px;
   }
 }
 .form-block__title span {
@@ -720,6 +746,13 @@ main {
   opacity: 0;
   transition: opacity 300ms ease;
 }
+@media (max-width: 767px) {
+  .form-block input {
+    height: 46px;
+    padding: 0px 26px 0px 26px;
+    font-size: 12px;
+  }
+}
 .form-block button {
   position: relative;
   width: 100%;
@@ -733,17 +766,32 @@ main {
   line-height: 160%;
   z-index: 1;
 }
+@media (max-width: 575px) {
+  .form-block button {
+    max-width: 222px;
+    height: 46px;
+    margin: 0px auto 18px auto;
+    display: block;
+    font-size: 14px;
+  }
+}
 .form-block button:hover::before {
   left: 0;
 }
 .form-block button::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: -200%;
   width: 300%;
   height: 100%;
-  background: linear-gradient(to left, rgb(255, 52, 89) 34%, rgb(255, 52, 89), rgb(66, 82, 209) 66%, rgb(66, 82, 209) 100%);
+  background: linear-gradient(
+    to left,
+    rgb(255, 52, 89) 34%,
+    rgb(255, 52, 89),
+    rgb(66, 82, 209) 66%,
+    rgb(66, 82, 209) 100%
+  );
   transition: left 0.5s ease-out;
   z-index: -1;
 }
@@ -754,6 +802,12 @@ main {
   line-height: 150%;
   text-align: center;
   color: rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 575px) {
+  .form-block__text {
+    max-width: 180px;
+    font-size: 11px;
+  }
 }
 .form-block__text a {
   text-decoration: underline;
@@ -792,6 +846,13 @@ main {
   font-size: 13px;
   text-transform: uppercase;
 }
+@media (max-width: 575px) {
+  .info-list__item:first-child .info-list__item-title {
+    margin: 2.56px 0px 6px 0px;
+    font-size: 14px;
+    line-height: 100%;
+  }
+}
 .info-list__item:first-child .info-list__item-title span {
   color: rgb(66, 82, 209);
 }
@@ -799,7 +860,7 @@ main {
   max-width: 310px;
 }
 .info-list__item:nth-child(2) .info-list__item-img {
-  width: 38px;
+  width: 51px;
   object-fit: contain;
 }
 .info-list__item:nth-child(2) .info-list__item-text-box {
@@ -809,12 +870,22 @@ main {
   width: 51px;
   margin: 0px 17px 0px 0px;
 }
+@media (max-width: 575px) {
+  .info-list__item-img-box {
+    margin: 0px 12px 0px 0px;
+  }
+}
 .info-list__item-img {
   height: 49px;
 }
 .info-list__item-title {
   font-weight: 700;
   line-height: 140%;
+}
+@media (max-width: 575px) {
+  .info-list__item-title {
+    font-size: 14px;
+  }
 }
 .info-list__item-title span {
   color: rgb(66, 82, 209);
