@@ -18,10 +18,17 @@
     right: 0;
     border-radius: 50%;
     transform: translate(51.58%, -39.85%);
-
     background: $blurVioletColor;
     opacity: 0.8;
     filter: blur(103px);
+
+    @include respond-below(sm) {
+      top: unset;
+      bottom: 0;
+      width: 912px;
+      height: 912px;
+      transform: translate(-401px, -325px);
+    }
   }
 
   &__small-blur {
@@ -34,11 +41,19 @@
     opacity: 0.5;
     filter: blur(103px);
     transform: translate(-24.25%, -1.75%);
+
+    @include respond-below(sm) {
+      display: none;
+    }
   }
 }
 .header {
   width: 100%;
   height: 124px;
+
+  @include respond-below(s) {
+    height: 88px;
+  }
 
   &__container {
     width: 100%;
@@ -46,11 +61,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include respond-below(xs) {
+      padding: 0px 16px 0px 30px;
+    }
   }
 
   &__logo {
     width: 182px;
     height: 56px;
+    object-fit: contain;
+    object-position: center;
+
+    @include respond-below(xs) {
+      width: 101px;
+      height: 32px;
+    }
   }
 
   &__logo-img {
@@ -63,6 +89,11 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__info-list-item {
@@ -74,12 +105,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include respond-below(xs) {
+      width: 84px;
+      height: 24px;
+      margin: 0px 0px 0px 6px;
+      border-radius: 6px;
+
+      &:first-child {
+        width: 88px;
+      }
+    }
   }
 
   &__calendar-icon {
     width: 15px;
     height: 15px;
     margin: 0px 6px 0px 0px;
+    @include respond-below(xs) {
+      width: 12.55px;
+      height: 12.55px;
+      margin: 0px 3.56px 0px 0px;
+    }
   }
 
   &__calendar-text,
@@ -87,12 +134,22 @@
     font-size: 14px;
     font-weight: 600;
     line-height: 100%;
+
+    @include respond-below(xs) {
+      font-size: 11px;
+    }
   }
 
   &__duration-icon {
     width: 17px;
     height: 17px;
     margin: 0px 6px 0px 0px;
+
+    @include respond-below(xs) {
+      width: 12.41px;
+      height: 12.41px;
+      margin: 0px 3.56px 0px 0px;
+    }
   }
 }
 .main {
@@ -103,8 +160,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     z-index: -1;
   }
 
@@ -117,11 +172,35 @@
     grid-template:
       'title form' auto
       'info-list form' auto/ 46.01% 39.44%;
-    gap: 58px 14.55%;
+    gap: 35px 14.55%;
+
+    @include respond-below(md) {
+      grid-template:
+        'title form' auto
+        'info-list form' auto/ 1fr 1fr;
+      gap: 42px 10%;
+    }
+
+    @include respond-below(sm) {
+      grid-template:
+        'title' auto
+        'form' auto
+        'info-list' auto/ 1fr;
+      gap: 42px 10%;
+    }
+
+    @include respond-below(xs) {
+      margin-top: 4px;
+    }
   }
 
   &__title-block {
+    margin-top: 10px;
     grid-area: title;
+
+    @include respond-below(xs) {
+      margin-top: 0;
+    }
   }
 
   &__form-block {
@@ -133,52 +212,159 @@
   }
 }
 .icons {
+  width: 100%;
+  height: 100%;
+
+  & > div {
+    position: absolute;
+
+    &:not(:last-child) {
+      @include respond-below(md) {
+        display: none;
+      }
+    }
+
+    img {
+      position: absolute;
+    }
+
+    & > div {
+      position: absolute;
+      border-radius: 50%;
+    }
+  }
+
   &__html {
+    top: 117px;
+    right: 1.8%;
+    width: 116px;
+    height: 105px;
   }
 
   &__html-img {
+    top: 0;
+    left: 0;
+    width: 106px;
+    height: 106px;
   }
 
   &__html-point {
+    top: 20.45px;
+    right: 4px;
+    width: 8px;
+    height: 8px;
+    background: $orangeColor;
   }
 
   &__css {
+    top: 214px;
+    right: 10%;
+    width: 78px;
+    height: 105px;
   }
 
   &__css-img {
+    bottom: 0;
+    left: 0;
+    width: 87px;
+    height: 102px;
   }
 
   &__css-point {
+    width: 6px;
+    height: 6px;
+    top: 0;
+    right: 0;
+    background: $blueCssColor;
   }
 
   &__js {
+    top: 280px;
+    right: 1.5%;
+    width: 94px;
+    height: 87px;
   }
 
   &__js-img {
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 87px;
   }
 
   &__js-point {
+    width: 8px;
+    height: 8px;
+    top: 20px;
+    right: 0;
+    background: $yellowColor;
   }
 
   &__sublime {
+    top: 347px;
+    right: 10.8%;
+    width: 63px;
+    height: 79px;
   }
 
   &__sublime-img {
+    bottom: 0;
+    left: 0;
+    width: 66px;
+    height: 65px;
   }
 
   &__sublime-point {
+    width: 6px;
+    height: 6px;
+    top: 0;
+    right: 0;
+    background: $yellowHotColor;
   }
 
   &__vscode {
+    top: 423px;
+    right: 3.9%;
+    width: 88px;
+    height: 67px;
   }
 
   &__vscode-img {
+    top: 0;
+    left: 0;
+    width: 78px;
+    height: 78px;
   }
 
   &__vscode-point {
+    width: 6px;
+    height: 6px;
+    bottom: 0;
+    right: 0;
+    background: $blueVSCodeColor;
+  }
+
+  &__footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 83px;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+      object-position: center bottom;
+    }
   }
 }
 .title-block {
+  @include respond-below(sm) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   &__label {
     width: 119px;
     height: 32px;
@@ -187,6 +373,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include respond-below(xs) {
+      width: 89px;
+      height: 24px;
+      border-radius: 3px;
+    }
   }
 
   &__label-icon {
@@ -198,40 +390,82 @@
       width: 100%;
       height: 100%;
     }
+
+    @include respond-below(xs) {
+      width: 14px;
+      height: 14px;
+    }
   }
 
   &__label-text {
     font-size: 16px;
     font-weight: 600;
     line-height: 150%;
+
+    @include respond-below(xs) {
+      font-size: 12px;
+    }
   }
 
   &__title {
-    margin: 0px 0px 20.46px 0px;
+    margin: 0px 0px 27px 0px;
     font-weight: 600;
-    font-size: 22px;
-    line-height: 118.18%;
+    font-size: clamp(20px, 1.6vw, 22px);
+    line-height: 108%;
+
+    @include respond-below(md) {
+      font-size: 20px;
+    }
+
+    @include respond-below(sm) {
+      font-size: 18px;
+    }
+
+    @include respond-below(xs) {
+      font-size: 15px;
+    }
   }
 
   &__first-title-part {
+    margin-bottom: 3px;
     display: block;
     font-weight: 800;
-    font-size: clamp(53px, 7.4vw, 77px);
-    line-height: 122.08%;
+    font-size: clamp(53px, 7vw, 77px);
+    line-height: 118%;
     text-transform: uppercase;
     color: $redColor;
+
+    @include respond-below(xs) {
+      margin: 4px 0px 0px 0px;
+      line-height: 108%;
+    }
   }
 
   &__second-title-part {
     position: relative;
-    padding: 0px 13.4px 0px 13.4px;
-    margin: 0px 16px 0px 0px;
+    padding: 0px 12px 0px 12px;
+    margin: 0px 13px 0px 0px;
     display: inline-block;
     font-weight: 800;
     font-size: 24px;
-    line-height: 120.8%;
+    line-height: 161%;
     text-transform: uppercase;
     color: $whiteColor;
+    transform: translate(0px, 2px);
+
+    @include respond-between(sm, md) {
+      display: block;
+      width: max-content;
+      margin: 0 0 18px 0;
+    }
+
+    @include respond-below(xs) {
+      margin: 0px 8px 0px 0px;
+      padding: 2px 11px 0px 11px;
+      font-size: 16px;
+      line-height: 165%;
+    }
+
     span {
       position: absolute;
       top: 0;
@@ -249,6 +483,10 @@
     font-size: 18px;
     line-height: 148%;
 
+    @include respond-below(md) {
+      font-size: 16px;
+    }
+
     span {
       font-weight: 500;
     }
@@ -258,6 +496,15 @@
   padding: 50px 58px 50px 58px;
   background: $darkVioletColor;
   border-radius: 10px;
+  align-self: center;
+
+  @include respond-below(md) {
+    padding: 50px 16.11% 50px 16.11%;
+  }
+
+  @include respond-below(xs) {
+    padding: 41px 21px 40px 21px;
+  }
 
   &__title {
     width: 100%;
@@ -266,6 +513,11 @@
     font-size: 22px;
     line-height: 118%;
     text-align: center;
+
+    @include respond-below(sm) {
+      max-width: 248px;
+      margin: 0px auto 20px auto;
+    }
 
     span {
       color: $redColor;
@@ -335,21 +587,88 @@
   }
 }
 .info-list {
+  display: flex;
+  flex-direction: column;
+
+  @include respond-below(sm) {
+    max-width: 300px;
+    margin: 0 auto;
+    flex-direction: column-reverse;
+  }
+
+  @include respond-below(xxs) {
+    max-width: 224px;
+  }
+
   &__item {
+    width: 100%;
+    margin: 16px 0px 0px 0px;
+    display: flex;
+
+    &:first-child {
+      .info-list {
+        &__item-img {
+          width: 51px;
+          height: 53px;
+          object-fit: contain;
+          object-position: left center;
+        }
+
+        &__item-title {
+          margin: 2.56px 0px 0px 0px;
+          font-size: 13px;
+          text-transform: uppercase;
+
+          span {
+            color: $brightBlueColor;
+          }
+        }
+
+        &__item-text {
+          max-width: 310px;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .info-list {
+        &__item-img {
+          width: 38px;
+          object-fit: contain;
+        }
+
+        &__item-title {
+          // margin: 1.4px 0px 0px 0px;
+        }
+
+        &__item-text-box {
+          max-width: 210px;
+        }
+      }
+    }
   }
 
   &__item-img-box {
+    width: 51px;
+    margin: 0px 17px 0px 0px;
   }
 
   &__item-img {
+    height: 49px;
   }
 
   &__item-text-box {
   }
 
   &__item-title {
+    font-weight: 700;
+    line-height: 140%;
+    span {
+      color: $brightBlueColor;
+    }
   }
 
   &__item-text {
+    line-height: 160%;
   }
 }
