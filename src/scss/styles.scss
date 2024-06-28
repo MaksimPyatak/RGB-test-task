@@ -736,10 +736,6 @@
           object-fit: contain;
         }
 
-        &__item-title {
-          // margin: 1.4px 0px 0px 0px;
-        }
-
         &__item-text-box {
           max-width: 210px;
         }
@@ -758,9 +754,6 @@
 
   &__item-img {
     height: 49px;
-  }
-
-  &__item-text-box {
   }
 
   &__item-title {
