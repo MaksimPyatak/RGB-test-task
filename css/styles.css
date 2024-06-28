@@ -2,7 +2,7 @@
   font-family: 'Gilroy';
   src: local('Gilroy Regular'), local('Gilroy-Regular'),
     url('../fonts/Gilroy-Regular.woff2') format('woff2'),
-    url('../../fonts/Gilroy-Regular.woff') format('woff');
+    url('../fonts/Gilroy-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -11,7 +11,7 @@
   font-family: 'Gilroy';
   src: local('Gilroy Medium'), local('Gilroy-Medium'),
     url('../fonts/Gilroy-Medium.woff2') format('woff2'),
-    url('../../fonts/Gilroy-MediumBold') format('woff');
+    url('../fonts/Gilroy-MediumBold') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -20,7 +20,7 @@
   font-family: 'Gilroy';
   src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
     url('../fonts/Gilroy-Semibold.woff2') format('woff2'),
-    url('../../fonts/Gilroy-Semibold.woff') format('woff');
+    url('../fonts/Gilroy-Semibold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -29,7 +29,7 @@
   font-family: 'Gilroy';
   src: local('Gilroy Bold'), local('Gilroy-Bold'),
     url('../fonts/Gilroy-Bold.woff2') format('woff2'),
-    url('../../fonts/Gilroy-Bold.woff') format('woff');
+    url('../fonts/Gilroy-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -38,7 +38,7 @@
   font-family: 'Gilroy';
   src: local('Gilroy Extrabold'), local('Gilroy-Extrabold'),
     url('../fonts/Gilroy-Extrabold.woff2') format('woff2'),
-    url('../../fonts/Gilroy-Extrabold.woff') format('woff');
+    url('../fonts/Gilroy-Extrabold.woff') format('woff');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -706,54 +706,76 @@ main {
 .form-block__title span {
   color: rgb(255, 52, 89);
 }
-.form-block input {
+.form-block label {
+  position: relative;
+  margin: 0px 0px 14px 0px;
+  display: block;
+}
+.form-block__input {
   width: 100%;
   height: 51px;
-  margin: 0px 0px 14px 0px;
   padding: 0px 22px 0px 22px;
   border-radius: 4.48px;
   background: rgb(39, 45, 61);
 }
-.form-block input::-webkit-input-placeholder {
+.form-block__input::-webkit-input-placeholder {
   opacity: 1;
   transition: opacity 300ms ease;
 }
-.form-block input::-moz-placeholder {
+.form-block__input::-moz-placeholder {
   opacity: 1;
   transition: opacity 300ms ease;
 }
-.form-block input:-moz-placeholder {
+.form-block__input:-moz-placeholder {
   opacity: 1;
   transition: opacity 300ms ease;
 }
-.form-block input:-ms-input-placeholder {
+.form-block__input:-ms-input-placeholder {
   opacity: 1;
   transition: opacity 300ms ease;
 }
-.form-block input:focus::-webkit-input-placeholder {
+.form-block__input:focus::-webkit-input-placeholder {
   opacity: 0;
   transition: opacity 300ms ease;
 }
-.form-block input:focus::-moz-placeholder {
+.form-block__input:focus::-moz-placeholder {
   opacity: 0;
   transition: opacity 300ms ease;
 }
-.form-block input:focus:-moz-placeholder {
+.form-block__input:focus:-moz-placeholder {
   opacity: 0;
   transition: opacity 300ms ease;
 }
-.form-block input:focus:-ms-input-placeholder {
+.form-block__input:focus:-ms-input-placeholder {
   opacity: 0;
   transition: opacity 300ms ease;
 }
 @media (max-width: 767px) {
-  .form-block input {
+  .form-block__input {
     height: 46px;
     padding: 0px 26px 0px 26px;
     font-size: 12px;
   }
 }
-.form-block button {
+.form-block__input_error {
+  border: 1px solid rgb(255, 52, 89);
+}
+.form-block__error {
+  position: absolute;
+  bottom: 80%;
+  left: 0;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid rgb(255, 52, 89);
+  background: rgb(48, 46, 90);
+  display: none;
+  color: rgb(255, 52, 89);
+  z-index: 1;
+}
+.form-block__error_show {
+  display: block;
+}
+.form-block__button {
   position: relative;
   width: 100%;
   height: 51px;
@@ -767,7 +789,7 @@ main {
   z-index: 1;
 }
 @media (max-width: 575px) {
-  .form-block button {
+  .form-block__button {
     max-width: 222px;
     height: 46px;
     margin: 0px auto 18px auto;
@@ -775,10 +797,10 @@ main {
     font-size: 14px;
   }
 }
-.form-block button:hover::before {
+.form-block__button:hover::before {
   left: 0;
 }
-.form-block button::before {
+.form-block__button::before {
   content: '';
   position: absolute;
   top: 0;
@@ -812,6 +834,19 @@ main {
 .form-block__text a {
   text-decoration: underline;
   color: rgba(255, 255, 255, 0.5);
+}
+.form-block .iti {
+  width: 100%;
+}
+.form-block .iti__dropdown-content input,
+.form-block .iti__dropdown-content span {
+  color: rgb(36, 39, 49);
+}
+.form-block .iti__dropdown-content li span:last-child {
+  opacity: 0.8;
+}
+.form-block .iti__dropdown-content li span:nth-child(2) {
+  font-weight: 700;
 }
 
 .info-list {

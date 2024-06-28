@@ -6,6 +6,10 @@
     <title>POWERCODE ACADEMY</title>
     <link rel="icon" type="image/png" href="img/logo.png" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet "
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.1.0/build/css/intlTelInput.css"
+    />
   </head>
   <body>
     <div class="wrapper">
@@ -188,33 +192,47 @@
             </div>
           </div>
 
-          <form class="main__form-block form-block">
+          <form class="main__form-block form-block" id="form">
             <h2 class="form-block__title"
               >Запишитесь <span>бесплатно</span> и получите подарок</h2
             >
 
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Ваше имя и фамилия"
-            />
+            <label>
+              <div class="form-block__error" id="username-error"></div>
+              <input
+                class="form-block__input"
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Ваше имя и фамилия"
+              />
+            </label>
 
-            <input
-              type="tel"
-              name="tel"
-              id="tel"
-              placeholder="Ваш номер телефона"
-            />
+            <label>
+              <div class="form-block__error" id="tel-error"></div>
+              <input
+                class="form-block__input"
+                type="tel"
+                name="tel"
+                id="tel"
+                placeholder="Ваш номер телефона"
+              />
+            </label>
 
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Ваш email"
-            />
+            <label>
+              <div class="form-block__error" id="email-error"></div>
+              <input
+                class="form-block__input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Ваш email"
+              />
+            </label>
 
-            <button type="submit">Записаться бесплатно</button>
+            <button class="form-block__button" type="submit"
+              >Записаться бесплатно</button
+            >
 
             <div class="form-block__text">
               Нажимая на кнопку я согашаюсь
@@ -276,5 +294,9 @@
         </div>
       </main>
     </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.1.0/build/js/intlTelInput.min.js"></script>
+    <script></script>
   </body>
 </html>
