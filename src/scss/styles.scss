@@ -645,18 +645,37 @@
 
   .iti {
     width: 100%;
-    &__dropdown-content {
-      input,
-      span {
-        color: $blackColor;
-      }
+    // &__dropdown-content {
+    //   input,
+    //   span {
+    //     color: $blackColor;
+    //   }
 
-      li span:last-child {
-        opacity: 0.8;
-      }
-      li span:nth-child(2) {
-        font-weight: 700;
-      }
+    //   li span:last-child {
+    //     opacity: 0.8;
+    //   }
+    //   li span:nth-child(2) {
+    //     font-weight: 700;
+    //   }
+    // }
+  }
+}
+
+.iti {
+  &__dropdown-content {
+    background: $darkVioletColor !important;
+    border: 2px solid $brightBlueColor;
+  }
+  &__country-list {
+    background: $darkVioletColor;
+  }
+  &__search-input {
+    background: $violetColor;
+    border: 1px solid white;
+    border-radius: 3px;
+    &:focus-visible {
+      outline: 2px solid $brightBlueColor;
+      border-radius: 3px;
     }
   }
 }

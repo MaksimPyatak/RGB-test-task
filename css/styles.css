@@ -838,15 +838,22 @@ main {
 .form-block .iti {
   width: 100%;
 }
-.form-block .iti__dropdown-content input,
-.form-block .iti__dropdown-content span {
-  color: rgb(36, 39, 49);
+
+.iti__dropdown-content {
+  background: rgb(48, 58, 83) !important;
+  border: 2px solid rgb(66, 82, 209);
 }
-.form-block .iti__dropdown-content li span:last-child {
-  opacity: 0.8;
+.iti__country-list {
+  background: rgb(48, 58, 83);
 }
-.form-block .iti__dropdown-content li span:nth-child(2) {
-  font-weight: 700;
+.iti__search-input {
+  background: rgb(48, 46, 90);
+  border: 1px solid white;
+  border-radius: 3px;
+}
+.iti__search-input:focus-visible {
+  outline: 2px solid rgb(66, 82, 209);
+  border-radius: 3px;
 }
 
 .info-list {
